@@ -10,7 +10,7 @@ var app = new Vue(
         el: '#root',
         data: {
             mailRandom: '',
-            counter: 10,
+            isReady: false,
             mails: [],
             
         },
@@ -34,6 +34,7 @@ var app = new Vue(
                     this.mailRandom = response.data.response;
                     console.log(response.data.response);
                     this.mails.push(response.data.response)
+                    this.isReady = true;
                         },
                     )
             },

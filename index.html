@@ -9,9 +9,9 @@
 </head>
 <body>
     <div id="root">
-        <div >
-            <div v-for="element in mails">
-              {{element}}
+        <div>
+            <div v-if="mails.length > 9" v-for="element in mails" >
+                    {{element}}
             </div>
             <!-- <button @click="getMails()">Cliccami</button> -->
         </div>
